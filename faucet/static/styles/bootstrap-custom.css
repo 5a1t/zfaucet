@@ -1,0 +1,85 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-color: #30332e;
+  color: #fffbfc;
+}
+
+.navbar {
+  background-color: #010400;
+  border-color: #62bbc1;
+}
+
+.navbar-nav>.active>a {
+  background-color: #62bbc1;
+	
+}
+.btn-default, .input-group-addon {
+	background-color: #30332e;
+	color: #62bbc1;
+	border-color: #62bbc1;
+
+
+}
+
+.form-control {
+
+	background-color: #30332e;
+	color: #ec058e;
+	border-color: #62bbc1;
+
+}
+
+
+.form-control:focus {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 251, 252, 0.6);
+
+}
+
+
+.btn-default:hover, .btn-default:focus {
+	background-color: #010400 !important;
+	color: #62bbc1 !important;
+	border-color: #62bbc1 !important;
+
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #010400;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.taddress {
+  color: #ec058e;
+}
+
+.zaddress {
+  color: #62bbc1;
+}
