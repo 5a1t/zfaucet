@@ -9,6 +9,56 @@ body {
   margin-bottom: 60px;
   background-color: #30332e;
   color: #fffbfc;
+  background-image: url("/static/images/blueprint.png");
+}
+
+.panel-info > .panel-heading {
+  background-color: #dfd9f7;
+  color: rgb(54, 35, 105);
+}
+
+.panel-text p {
+  color: #505059;
+}
+
+.panel-body {
+  text-align: center;
+}
+
+.form-horizontal .input-group {
+  margin: auto;
+  margin-top: 20px;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.input-group-addon {
+  color: rgb(217, 209, 237) !important;
+  border-color: rgb(217, 209, 237) !important;
+}
+
+.form-control {
+  border-color: rgb(217, 209, 237) !important;
+}
+
+.form-group .glyphicon {
+  padding-right: 10px;
+}
+
+#submitButton {
+  background-color: rgb(76, 62, 111);
+}
+
+#donateButton {
+  background-color: rgb(234, 172, 23);
+}
+
+.modal-title {
+  display: inline;
+  color: rgb(72, 40, 153);
+  font-size: 18px;
 }
 
 .navbar {
@@ -18,7 +68,7 @@ body {
 
 .navbar-nav>.active>a {
   background-color: #62bbc1;
-	
+
 }
 .btn-default, .input-group-addon {
 	background-color: #30332e;
@@ -26,6 +76,11 @@ body {
 	border-color: #62bbc1;
 
 
+}
+
+.panel-title {
+  font-size: 24px;
+  margin-left: 20px;
 }
 
 .form-control {
@@ -52,12 +107,23 @@ body {
 
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
+  height: 20%;
   background-color: #010400;
+}
+
+.footer ul li {
+  list-style: none;
+  padding: 2px;
+}
+.footer .fa {
+  padding-right: 5px;
+}
+.footer .stats {
+  margin-top: 1em;
 }
 
 body > .container {
@@ -77,9 +143,9 @@ code {
 }
 
 .taddress {
-  color: #ec058e;
+  color: #dd8400;
 }
 
 .zaddress {
-  color: #62bbc1;
+  color: #4a2caa;
 }
