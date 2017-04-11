@@ -1,6 +1,32 @@
     <footer class="footer">
       <div class="container">
-        <p class="text-muted" style="text-align:center;font-size:1rem">Copyright 2016 Yoursite</p>
+        <div class="row">
+          <div class="stats col-md-4 pull-left">
+            <ul>
+              <li>
+                <i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;Currently running: 1.0.8
+              </li>
+              <li>
+                <i class="fa fa-database" aria-hidden="true"></i>&nbsp;Block Height: {{ height }}
+              </li>
+              <li>
+                <i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Difficulty: {{ difficulty | floatformat:4 }}
+              </li>
+            </ul>
+          </div>
+          <div class="stats col-md-4 pull-left">
+            <ul>
+              <li>
+                <i class="fa fa-money" aria-hidden="true"></i>&nbsp;Payouts: {{ payouts }}
+              </li>
+              <li>
+                <i class="fa fa-usd" aria-hidden="true"></i>&nbsp;Balance: {{ balance | floatformat:3}} ZEC
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <p class="text-muted" style="text-align:center;font-size:1rem">Faucet hosted by the Zerocoin Electric Coin Company</p>
+          </div>
+        </div>
       </div>
     </footer>
-

@@ -6,6 +6,7 @@
 
 {% block extend-js %} {% endblock %}
 
+{% include 'faucet/modal.html' %}
 
 {% block content %}
 
@@ -15,46 +16,50 @@
 		</div>
 	{% endif %}
 
-	
+
+
  	<div class="row">
-		<div class="col-xs-12">
-			<h1 style="text-align:center"> ZCash Faucet </h1>
-			<div style="text-align:center;font-size:1.5rem">Help fund the faucet: mfu8LbjAq15zmCDLCwUuay9cVc2FcGuY4d</div></br>
-		</div>
-		<div class="col-xs-4">
-			<h2>Stats:</h2>
-			<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;Currently running: z9 (testnet) </br>
-			<i class="fa fa-database" aria-hidden="true"></i>&nbsp;Block Height: {{ height }} </br>
-			<i class="fa fa-cog" aria-hidden="true"></i>&nbsp;Difficulty: {{ difficulty | floatformat:4 }} </br>
-			<i class="fa fa-money" aria-hidden="true"></i>&nbsp;Payouts: {{ payouts }} </br>
-			<i class="fa fa-usd" aria-hidden="true"></i>&nbsp;Balance: {{ balance | floatformat:3}} ZEC </br>
-		</div>
-		<div class="col-xs-8">
+		<div class="mainbox col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 faucetbox">
+			<div class="panel panel-info">
+					<div class="panel-heading">
+					<div class="panel-title">
+						Zcash Testnet Faucet
+					</div>
+				</div>
 
-			<div class="panel panel-default">
-			  <div class="panel-body" style="color:black">
-				<b>Welcome to the ZCash Faucet</b></br>
-				Enter your address and receive a small amount of ZEC to play with.<br>
-				Wallet is refilled with available mined ZEC every few hours.  Donations appreciated!</br>
-				Currently only <span class="taddress">transparent addresses</span> are supported, but <span class="zaddress">protected address</span> support coming soon.</br>
-				Transactions may not send if you recently used the faucet, to maintain enough funds for everyone who visits.</br>
-			  </div>
+					<div class="panel-body">
+						<div class="panel-text">
+							<p>
+								Enter your address and receive a small amount of testnet ZEC to play with.<br>
+								Currently only <span class="taddress">transparent addresses</span> are supported, but <span class="zaddress">shielded address</span> support is coming soon.</br>
+								To maintain enough funds for everyone, transactions may not send if you recently used the faucet.</br>
+								Faucet is refilled every few hours.  Donations appreciated!</br>
+							</p>
+						</div>
+						<form class="form-horizontal" method="post" action="/">
+							{% csrf_token %}
+							<div class="input-group col-md-8">
+								<span class="input-group-addon">Address</span>
+								<input class="form-control" placeholder="t1Uzwo2Ygks9ELztbgmy9WgfMGUetRg6UdB" name="address" maxlength="34" type="text"/>
+							</div>
+
+							<div class="form-group buttons">
+								<div class="col-md-4 col-md-offset-2">
+									<button id="submitButton" class="btn btn-block btn-primary" action="submit"><span class="glyphicon glyphicon-tint"></span>Tap Faucet</button>
+								</div>
+								<div class="col-md-4">
+									<button id="donateButton" type="button" data-toggle="modal" data-target="#donateModal" class="btn btn-block" ><span class="glyphicon glyphicon-heart"></span>Donate</button>
+								</div>
+							</div>
+						</form>
+					</div>
 			</div>
+		</div>
 
 		</div>
-	
+
 	</div>
 	</br>
-	
-	<form action="/" method="post">
-		{% csrf_token %}
-		<div class="input-group input-group-lg">
-		  <span class="input-group-addon" id="sizing-addon1">Address:</span>
-		  <input type="text" name="address" class="form-control" placeholder="mfu8LbjAq15zmCDLCwUuay9cVc2FcGuY4d" aria-describedby="sizing-addon1" maxlength="34">
-		</div>
-
-		<button class="btn btn-block btn-lg btn-default" action="submit" ><span class="glyphicon glyphicon-tint"></span> Tap Faucet</button>
-	</form>
 
 	</br>
 
